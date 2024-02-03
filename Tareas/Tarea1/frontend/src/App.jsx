@@ -29,7 +29,7 @@ function App() {
         </button>
       </div>
       <div className="card">
-        <label>{datos}</label>
+        <h2>{datos}</h2>
       </div>  
     </>
   )
