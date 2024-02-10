@@ -8,7 +8,7 @@ const PORT = 3002
 app.use(cors())
 app.use(morgan('dev'))
 app.use(express.json())
-mongoose.connect('mongodb://localhost:27017/tarea2',{ useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://MongoDB:27017/tarea2',{ useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 
 db.on('error',console.error.bind(console, 'Error de conexion a la base de Datos'))
