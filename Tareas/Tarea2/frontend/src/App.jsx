@@ -18,8 +18,12 @@ function formato_hora() {
   let dia = fecha.getDate();
   let mes = fecha.getMonth() + 1;
   let year = fecha.getFullYear();
+  let hora = fecha.getHours();
+  let minutos = fecha.getMinutes();
+  let segundos = fecha.getSeconds();
   let fechaAccion = dia + "/" + mes + "/" + year;
-  let textoFinal = fechaAccion
+  let horaAccion = hora + ":" + minutos + ":" + segundos;
+  let textoFinal = fechaAccion + " " + horaAccion;
   return textoFinal;
 }
 
@@ -46,14 +50,11 @@ const sendData = async () => {
       <div>
         <Webcam ref={webCamRef}/>
       </div>
-      <h1>Vite + React</h1>
+      <h1>FOTO ALBUM</h1>
       <div className="card">
         <button onClick={() => {showImage()}}>
           Take photo
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
       <div>
         <img src={img}></img>

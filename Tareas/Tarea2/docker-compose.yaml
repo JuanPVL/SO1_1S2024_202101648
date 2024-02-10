@@ -16,7 +16,7 @@ services:
     ports:
       - "3002:3002"
   frontend:
-    image: 'juanpvl/tarea2front'
+    image: 'juanpvl/tarea2frontend'
     container_name: 'frontReact'
     ports:
       - '5173:5173'
