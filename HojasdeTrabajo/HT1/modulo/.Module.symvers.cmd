@@ -1,1 +1,0 @@
-savedcmd_/home/juanpvl/Escritorio/SO1_1S2024_202101648/HojasdeTrabajo/HT1/modulo/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/juanpvl/Escritorio/SO1_1S2024_202101648/HojasdeTrabajo/HT1/modulo/Module.symvers -T /home/juanpvl/Escritorio/SO1_1S2024_202101648/HojasdeTrabajo/HT1/modulo/modules.order -i Module.symvers -e 

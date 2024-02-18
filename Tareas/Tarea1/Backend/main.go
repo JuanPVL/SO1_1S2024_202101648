@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/cors"
+	"fmt"
+	"os/exec"
 )
 
 type Respuesta struct {
@@ -12,20 +12,11 @@ type Respuesta struct {
 
 
 func main() {
-	app := fiber.New()
-	app.Use(cors.New(cors.Config{
-		AllowOrigins: "*",
-		AllowMethods: "GET,POST",
-		AllowHeaders: "Origin, Content-Type, Accept",
-	}))
-	
-	app.Get("/data", func(c *fiber.Ctx) error {
-		respuesta := Respuesta{
-			Carnet: "202101648",
-			Nombre: "Juan Pedro Valle Lema",
-		}
-		return c.JSON(respuesta)
-	})
+	cmd := exec.Command("cat", "/proc/module_ram")
+	stdout, err := cmd.Output()
 
-	app.Listen(":3002")
+	if err != nil {
+		fmt.Sprintf("Error: %s", err)
+	}
+	fmt.Println(string(stdout))
 }
