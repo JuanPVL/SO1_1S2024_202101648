@@ -41,14 +41,14 @@ static struct proc_ops archivo_operaciones = {
 
 static int __init modulo_init(void)
 {
-    proc_create("module_ram", 0, NULL, &archivo_operaciones);
+    proc_create("ram_so1_1s2024", 0, NULL, &archivo_operaciones);
     printk(KERN_INFO "Modulo lectura RAM montado\n");
     return 0;
 }
 
 static void __exit modulo_cleanup(void)
 {
-    remove_proc_entry("module_ram", NULL);
+    remove_proc_entry("ram_so1_1s2024", NULL);
     printk(KERN_INFO "Modulo lectura RAM eliminado \n");
 }
 
