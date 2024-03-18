@@ -10,7 +10,9 @@ Las dependencias vijs y chart-js2, nos permiten realizar nuestras graficas dentr
 
 Para realizar los cambios en nuestros graficos usamos tanto useEffect para los casos que cambian o se alteran durante la ejecucion, como useState.
 Ejemplo en carga de grafico de ram
-'''
+
+```
+
 const [data, setData] = useState({
         total:0,
         used:0,
@@ -46,7 +48,8 @@ const [data, setData] = useState({
             clearInterval(interval);
         };
     }, []);
-'''
+    
+```
 
 Router-dom nos permite realizar cambios entre diferentes vistas que tengamos en nuestro frontend, en este caso accedemos a estas por medio de una navbar.
 
@@ -54,7 +57,9 @@ Router-dom nos permite realizar cambios entre diferentes vistas que tengamos en 
 
 Se utilizo un archivo nginx.conf para poder exponer nuestro frontend en el puerto 80, este ademas nos permite trabajar de forma sencilla proxis para no tener que colocar la ruta de nuestro backend directamente en el front.
 Un ejemplo de como se puede ver este archivo es el siguiente
-'''
+
+```
+
 server {
     listen 80
     root /usr/share/nginx/html
@@ -68,7 +73,8 @@ server {
         proxy_pass http://nombre_contenedor:puerto_backend
     }
 }
-'''
+
+```
 
 ## Modulos
 Utilizamos tres modulos diferentes que son insertados en el Kernel de nuestra maquina de Linux.
@@ -76,7 +82,9 @@ Utilizamos tres modulos diferentes que son insertados en el Kernel de nuestra ma
 #### Modulo de Ram
 Este nos permite obtener el porcentaje de utilizacion y el porcentaje libre de ram que tenemos en tiempo real, por medio de este podemos realizar posteriormente lo que son nuestros graficos de tiempo real en el frontend y lo que es el grafico de uso historico.
 Formato:
-'''
+
+```
+
 {
 {"totalRam": 15664, 
 "used": 13155, 
@@ -85,11 +93,14 @@ Formato:
 "porcNotUsed": 17}
 }
 
-'''
+```
+
 #### Modulo de CPU
 Este nos permite obtener el porcentaje de utilizacion y el porcentaje libre de cpu que tenemos en tiempo real, por medio de este podemos realizar posteriormente lo que son nuestros graficos de tiempo real en el frontend y lo que es el grafico de uso historico.
 Formato:
-'''
+
+```
+
 {
 "cpu_total":47518943731316,
 "cpu_en_uso":16862400000000,
@@ -97,12 +108,14 @@ Formato:
 "PorcNotUsed":65
 }
 
-'''
+```
 
 #### Modulo de Procesos
 Este nos permite saber que procesos existen dentro de nuestro computador, devolviendolos un json en el que tenemos en formato de array todos los procesos, con informacion como su pid, sus hijos, si este tiene un padre entre otros datos.
 Formato:
-'''
+
+```
+
 {
 "processes":[
 {"pid":1,
@@ -116,7 +129,9 @@ Formato:
 "state":1,
 "pidPadre":1
 }
-'''
+
+```
+
 ### Backend
 Para la realizacion del backend se utilizo el lenguaje de programacion GO. En este para la realizacion de lo que fue nuestra api utilizamos fiber. Para la realizacion de funciones como poder obtener los datos se utiliza os/exec, lo que nos permite ejecutar comando de consola y obtener su resultado. Para poder realizar el parseo de nuestros strings a formato json utilizamos una funcion de golang llamada unmarshall.Por ultimo tambien utilizamos librerias para realizar una conexion y carga de datos a los que es una base de datos realizada en MySQL.
 Nuestro Backend se realizo para que estuviera corriendo en el puerto 3002, usando rutas como /ram, /cpu, /historical entre otras para realizar las funcionalidades necesarias y poder mostrar resultados en nuestro frontend.
