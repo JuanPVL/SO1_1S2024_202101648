@@ -1,10 +1,28 @@
 const Redis = require('ioredis');
 
+const client = new Redis({
+    host: '10.246.236.59',
+    port: 6379,
+});
+
 const redisConection = new Redis({
-    host:'localhost',
+    host:'10.246.236.59',
     port:6379,
     connectionTimeout:5000,
 })
+
+
+function connect(){
+    client.on('connect', () => {
+        console.log('Connected to Redis');
+    });
+    
+    client.on('error', (err) => {
+        console.log('Error connecting to Redis:', err);
+    });
+}
+
+connect()
 
 
 function publishMessage(){
