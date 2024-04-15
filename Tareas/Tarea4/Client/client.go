@@ -14,10 +14,10 @@ import (
 var ctx = context.Background()
 
 type Data struct {
-	Name      string
-	Album     string
-	Year 	  string
-	Rank     string
+	Name  string
+	Album string
+	Year  string
+	Rank  string
 }
 
 func insertData(c *fiber.Ctx) error {
@@ -28,14 +28,14 @@ func insertData(c *fiber.Ctx) error {
 	}
 
 	music := Data{
-		Name:         data["name"],
-		Album:    data["album"],
-		Year: data["year_release"],
-		Rank:      data["rank_album"],
+		Name:  data["name"],
+		Album: data["album"],
+		Year:  data["year_release"],
+		Rank:  data["rank_album"],
 	}
 
 	go sendServer(music)
-	return nil
+	return c.JSON(fiber.Map{"mensaje": "Insercion Realizada Correctamente"})
 }
 
 func sendServer(music Data) {
@@ -54,10 +54,10 @@ func sendServer(music Data) {
 	}(conn)
 
 	ret, err := cl.ReturnInfo(ctx, &pb.RequestId{
-		Name:     music.Name,
-		Album:    music.Album,
-		Year: 	  music.Year,
-		Rank:     music.Rank,
+		Name:  music.Name,
+		Album: music.Album,
+		Year:  music.Year,
+		Rank:  music.Rank,
 	})
 	if err != nil {
 		log.Fatalln(err)
