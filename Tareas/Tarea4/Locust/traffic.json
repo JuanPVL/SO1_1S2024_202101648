@@ -1,0 +1,602 @@
+[
+    {
+        "name": "Queen",
+        "album": "Gusikowski, Berge and Schuster",
+        "year_release": "1991",
+        "rank_album": "1"
+    },
+    {
+        "name": "Queen",
+        "album": "Legros, Schowalter and Osinski",
+        "year_release": "2023",
+        "rank_album": "9"
+    },
+    {
+        "name": "U2",
+        "album": "Breitenberg, Ritchie and Auer",
+        "year_release": "2021",
+        "rank_album": "100"
+    },
+    {
+        "name": "Coldplay",
+        "album": "Bernier and Sons",
+        "year_release": "2023",
+        "rank_album": "100"
+    },
+    {
+        "name": "Maroon 5",
+        "album": "Quigley, Mayer and Miller",
+        "year_release": "2003",
+        "rank_album": "30"
+    },
+    {
+        "name": "The Beach Boys",
+        "album": "Terry, Kohler and Mann",
+        "year_release": "2006",
+        "rank_album": "100"
+    },
+    {
+        "name": "Maroon 5",
+        "album": "Pagac and Sons",
+        "year_release": "1997",
+        "rank_album": "5"
+    },
+    {
+        "name": "U2",
+        "album": "O'Conner-Bashirian",
+        "year_release": "2006",
+        "rank_album": "100"
+    },
+    {
+        "name": "Coldplay",
+        "album": "Hagenes and Sons",
+        "year_release": "2016",
+        "rank_album": "100"
+    },
+    {
+        "name": "Led Zeppelin",
+        "album": "Bogan, Mayer and Upton",
+        "year_release": "1992",
+        "rank_album": "100"
+    },
+    {
+        "name": "Queen",
+        "album": "Kerluke, Walker and Boyer",
+        "year_release": "1998",
+        "rank_album": "6"
+    },
+    {
+        "name": "Skrillex",
+        "album": "Ritchie, Will and Murray",
+        "year_release": "1998",
+        "rank_album": "100"
+    },
+    {
+        "name": "Queen",
+        "album": "Weissnat-Conroy",
+        "year_release": "1993",
+        "rank_album": "86"
+    },
+    {
+        "name": "Big Time Rush",
+        "album": "Macejkovic, Huels and Kshlerin",
+        "year_release": "2021",
+        "rank_album": "6"
+    },
+    {
+        "name": "Maroon 5",
+        "album": "Wyman, Volkman and Waters",
+        "year_release": "1991",
+        "rank_album": "100"
+    },
+    {
+        "name": "Queen",
+        "album": "Kris Group",
+        "year_release": "1990",
+        "rank_album": "100"
+    },
+    {
+        "name": "Big Time Rush",
+        "album": "Bahringer, Wolff and Kirlin",
+        "year_release": "2010",
+        "rank_album": "62"
+    },
+    {
+        "name": "Imagine Dragons",
+        "album": "Nicolas, Zulauf and Murazik",
+        "year_release": "1997",
+        "rank_album": "3"
+    },
+    {
+        "name": "Imagine Dragons",
+        "album": "Ferry, Gottlieb and Hand",
+        "year_release": "2021",
+        "rank_album": "11"
+    },
+    {
+        "name": "Imagine Dragons",
+        "album": "Wolff, Kovacek and Waters",
+        "year_release": "2018",
+        "rank_album": "100"
+    },
+    {
+        "name": "Maroon 5",
+        "album": "Cruickshank-Dare",
+        "year_release": "1992",
+        "rank_album": "9"
+    },
+    {
+        "name": "Queen",
+        "album": "Schuster, Murray and Hermiston",
+        "year_release": "2007",
+        "rank_album": "4"
+    },
+    {
+        "name": "U2",
+        "album": "Wehner-Leffler",
+        "year_release": "1997",
+        "rank_album": "100"
+    },
+    {
+        "name": "Queen",
+        "album": "Jacobs and Sons",
+        "year_release": "2022",
+        "rank_album": "62"
+    },
+    {
+        "name": "Coldplay",
+        "album": "Emard-Schuster",
+        "year_release": "2002",
+        "rank_album": "100"
+    },
+    {
+        "name": "Imagine Dragons",
+        "album": "Zemlak-Jacobson",
+        "year_release": "1993",
+        "rank_album": "100"
+    },
+    {
+        "name": "Led Zeppelin",
+        "album": "Quitzon LLC",
+        "year_release": "2020",
+        "rank_album": "7"
+    },
+    {
+        "name": "Maroon 5",
+        "album": "Spinka, Bode and Grimes",
+        "year_release": "2023",
+        "rank_album": "100"
+    },
+    {
+        "name": "The Beach Boys",
+        "album": "Shanahan Inc",
+        "year_release": "1998",
+        "rank_album": "100"
+    },
+    {
+        "name": "Coldplay",
+        "album": "Boyle, Boyer and Hudson",
+        "year_release": "1995",
+        "rank_album": "5"
+    },
+    {
+        "name": "Queen",
+        "album": "Considine and Sons",
+        "year_release": "2010",
+        "rank_album": "2"
+    },
+    {
+        "name": "Metallica",
+        "album": "Kutch-Lueilwitz",
+        "year_release": "2007",
+        "rank_album": "41"
+    },
+    {
+        "name": "Skrillex",
+        "album": "Ortiz and Sons",
+        "year_release": "2022",
+        "rank_album": "100"
+    },
+    {
+        "name": "Led Zeppelin",
+        "album": "Orn Inc",
+        "year_release": "2001",
+        "rank_album": "63"
+    },
+    {
+        "name": "Big Time Rush",
+        "album": "Blanda and Sons",
+        "year_release": "1991",
+        "rank_album": "1"
+    },
+    {
+        "name": "Queen",
+        "album": "Pacocha Group",
+        "year_release": "2010",
+        "rank_album": "100"
+    },
+    {
+        "name": "Metallica",
+        "album": "Carroll and Sons",
+        "year_release": "1992",
+        "rank_album": "7"
+    },
+    {
+        "name": "Coldplay",
+        "album": "Cruickshank, Homenick and Morar",
+        "year_release": "2016",
+        "rank_album": "100"
+    },
+    {
+        "name": "U2",
+        "album": "Grady, Adams and Turner",
+        "year_release": "1998",
+        "rank_album": "100"
+    },
+    {
+        "name": "U2",
+        "album": "Feest and Sons",
+        "year_release": "2009",
+        "rank_album": "3"
+    },
+    {
+        "name": "Queen",
+        "album": "O'Reilly-Rowe",
+        "year_release": "2020",
+        "rank_album": "4"
+    },
+    {
+        "name": "Queen",
+        "album": "Hagenes, Considine and Sawayn",
+        "year_release": "1999",
+        "rank_album": "100"
+    },
+    {
+        "name": "Metallica",
+        "album": "Dickinson-Gulgowski",
+        "year_release": "2002",
+        "rank_album": "23"
+    },
+    {
+        "name": "Led Zeppelin",
+        "album": "Blanda-Barrows",
+        "year_release": "2010",
+        "rank_album": "9"
+    },
+    {
+        "name": "Maroon 5",
+        "album": "Farrell Inc",
+        "year_release": "2024",
+        "rank_album": "100"
+    },
+    {
+        "name": "U2",
+        "album": "Crist, Bruen and Oberbrunner",
+        "year_release": "1998",
+        "rank_album": "100"
+    },
+    {
+        "name": "Led Zeppelin",
+        "album": "Schaefer LLC",
+        "year_release": "2011",
+        "rank_album": "100"
+    },
+    {
+        "name": "Big Time Rush",
+        "album": "O'Hara, Abernathy and Crooks",
+        "year_release": "1997",
+        "rank_album": "72"
+    },
+    {
+        "name": "The Beach Boys",
+        "album": "Volkman-Russel",
+        "year_release": "2021",
+        "rank_album": "1"
+    },
+    {
+        "name": "The Beach Boys",
+        "album": "Rogahn-Harvey",
+        "year_release": "2023",
+        "rank_album": "100"
+    },
+    {
+        "name": "The Beach Boys",
+        "album": "Shields-Purdy",
+        "year_release": "2007",
+        "rank_album": "62"
+    },
+    {
+        "name": "Big Time Rush",
+        "album": "Lowe, Sporer and Schaden",
+        "year_release": "2013",
+        "rank_album": "100"
+    },
+    {
+        "name": "Coldplay",
+        "album": "Bayer, Ritchie and Abbott",
+        "year_release": "1994",
+        "rank_album": "5"
+    },
+    {
+        "name": "Coldplay",
+        "album": "Torp and Sons",
+        "year_release": "2017",
+        "rank_album": "1"
+    },
+    {
+        "name": "Maroon 5",
+        "album": "Pagac and Sons",
+        "year_release": "2021",
+        "rank_album": "83"
+    },
+    {
+        "name": "Big Time Rush",
+        "album": "Dickinson, Auer and Senger",
+        "year_release": "2000",
+        "rank_album": "82"
+    },
+    {
+        "name": "Maroon 5",
+        "album": "Krajcik, Zieme and Schoen",
+        "year_release": "2021",
+        "rank_album": "81"
+    },
+    {
+        "name": "Metallica",
+        "album": "Champlin-Tremblay",
+        "year_release": "2001",
+        "rank_album": "100"
+    },
+    {
+        "name": "Coldplay",
+        "album": "Tromp-Block",
+        "year_release": "1993",
+        "rank_album": "1"
+    },
+    {
+        "name": "Imagine Dragons",
+        "album": "Raynor Group",
+        "year_release": "1990",
+        "rank_album": "100"
+    },
+    {
+        "name": "Maroon 5",
+        "album": "Sawayn, Beer and Robel",
+        "year_release": "2006",
+        "rank_album": "100"
+    },
+    {
+        "name": "U2",
+        "album": "O'Keefe-Mills",
+        "year_release": "2007",
+        "rank_album": "100"
+    },
+    {
+        "name": "Led Zeppelin",
+        "album": "Hartmann-Kozey",
+        "year_release": "2020",
+        "rank_album": "100"
+    },
+    {
+        "name": "Skrillex",
+        "album": "Ryan and Sons",
+        "year_release": "1990",
+        "rank_album": "5"
+    },
+    {
+        "name": "The Beach Boys",
+        "album": "Sporer and Sons",
+        "year_release": "2022",
+        "rank_album": "100"
+    },
+    {
+        "name": "Imagine Dragons",
+        "album": "Mosciski, O'Keefe and Abbott",
+        "year_release": "2024",
+        "rank_album": "94"
+    },
+    {
+        "name": "Led Zeppelin",
+        "album": "Davis-McKenzie",
+        "year_release": "2013",
+        "rank_album": "100"
+    },
+    {
+        "name": "Queen",
+        "album": "Murray Group",
+        "year_release": "2024",
+        "rank_album": "100"
+    },
+    {
+        "name": "The Beach Boys",
+        "album": "Buckridge LLC",
+        "year_release": "1992",
+        "rank_album": "2"
+    },
+    {
+        "name": "Queen",
+        "album": "Kautzer, O'Hara and Mante",
+        "year_release": "2021",
+        "rank_album": "100"
+    },
+    {
+        "name": "Metallica",
+        "album": "Bergstrom LLC",
+        "year_release": "1991",
+        "rank_album": "92"
+    },
+    {
+        "name": "U2",
+        "album": "Macejkovic-Dare",
+        "year_release": "2005",
+        "rank_album": "100"
+    },
+    {
+        "name": "U2",
+        "album": "Upton, Hermann and Swift",
+        "year_release": "2024",
+        "rank_album": "100"
+    },
+    {
+        "name": "Imagine Dragons",
+        "album": "Block and Sons",
+        "year_release": "2007",
+        "rank_album": "100"
+    },
+    {
+        "name": "Queen",
+        "album": "Kohler and Sons",
+        "year_release": "1997",
+        "rank_album": "100"
+    },
+    {
+        "name": "Coldplay",
+        "album": "Turner-McClure",
+        "year_release": "2020",
+        "rank_album": "100"
+    },
+    {
+        "name": "The Beach Boys",
+        "album": "Kirlin and Sons",
+        "year_release": "2022",
+        "rank_album": "94"
+    },
+    {
+        "name": "Skrillex",
+        "album": "Kshlerin, Mills and Padberg",
+        "year_release": "1998",
+        "rank_album": "73"
+    },
+    {
+        "name": "Coldplay",
+        "album": "Konopelski, Mitchell and Beatty",
+        "year_release": "2023",
+        "rank_album": "5"
+    },
+    {
+        "name": "The Beach Boys",
+        "album": "Ward, Kerluke and Hoppe",
+        "year_release": "1996",
+        "rank_album": "16"
+    },
+    {
+        "name": "Big Time Rush",
+        "album": "Stoltenberg, Nikolaus and Smitham",
+        "year_release": "1995",
+        "rank_album": "100"
+    },
+    {
+        "name": "Skrillex",
+        "album": "Cormier-Howell",
+        "year_release": "2012",
+        "rank_album": "76"
+    },
+    {
+        "name": "Skrillex",
+        "album": "Stanton and Sons",
+        "year_release": "2007",
+        "rank_album": "1"
+    },
+    {
+        "name": "Coldplay",
+        "album": "Champlin Group",
+        "year_release": "2015",
+        "rank_album": "76"
+    },
+    {
+        "name": "Big Time Rush",
+        "album": "Osinski and Sons",
+        "year_release": "2002",
+        "rank_album": "100"
+    },
+    {
+        "name": "Big Time Rush",
+        "album": "Willms, Corkery and Morar",
+        "year_release": "2011",
+        "rank_album": "100"
+    },
+    {
+        "name": "Coldplay",
+        "album": "Hodkiewicz, Jones and Wunsch",
+        "year_release": "2020",
+        "rank_album": "4"
+    },
+    {
+        "name": "Imagine Dragons",
+        "album": "Bahringer, Miller and Dare",
+        "year_release": "2014",
+        "rank_album": "100"
+    },
+    {
+        "name": "Skrillex",
+        "album": "Schneider LLC",
+        "year_release": "2020",
+        "rank_album": "27"
+    },
+    {
+        "name": "Skrillex",
+        "album": "Gusikowski Inc",
+        "year_release": "2020",
+        "rank_album": "100"
+    },
+    {
+        "name": "U2",
+        "album": "Wolff Inc",
+        "year_release": "2021",
+        "rank_album": "100"
+    },
+    {
+        "name": "Metallica",
+        "album": "Mante, Padberg and Rolfson",
+        "year_release": "2020",
+        "rank_album": "100"
+    },
+    {
+        "name": "Big Time Rush",
+        "album": "Cassin-Johns",
+        "year_release": "1992",
+        "rank_album": "72"
+    },
+    {
+        "name": "The Beach Boys",
+        "album": "Kirlin-Rippin",
+        "year_release": "2023",
+        "rank_album": "2"
+    },
+    {
+        "name": "Maroon 5",
+        "album": "Medhurst LLC",
+        "year_release": "2020",
+        "rank_album": "100"
+    },
+    {
+        "name": "Coldplay",
+        "album": "Klocko and Sons",
+        "year_release": "1995",
+        "rank_album": "100"
+    },
+    {
+        "name": "U2",
+        "album": "Donnelly, Emard and Jaskolski",
+        "year_release": "1991",
+        "rank_album": "91"
+    },
+    {
+        "name": "U2",
+        "album": "Gutmann, Hand and Okuneva",
+        "year_release": "2000",
+        "rank_album": "18"
+    },
+    {
+        "name": "Imagine Dragons",
+        "album": "Kreiger, Dickens and Beer",
+        "year_release": "2021",
+        "rank_album": "100"
+    },
+    {
+        "name": "Led Zeppelin",
+        "album": "Simonis Group",
+        "year_release": "2001",
+        "rank_album": "100"
+    }
+]
