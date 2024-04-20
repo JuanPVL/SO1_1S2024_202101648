@@ -23,8 +23,17 @@ Por ultimo, tenemos Strimzi, este nos provee un conjunto de operadores para ejec
 
 ### Captura Inicio
 
+![image](https://github.com/JuanPVL/SO1_1S2024_202101648/assets/98924809/ce780e07-8ac3-40e1-ae42-44c4a7ed848c)
+
+![image](https://github.com/JuanPVL/SO1_1S2024_202101648/assets/98924809/fd0939e1-3467-4f97-ae96-2daf35366baa)
+
 ---
 
 ### Captura Final
+
+![image](https://github.com/JuanPVL/SO1_1S2024_202101648/assets/98924809/762a743b-3d8a-4f96-b1ec-14cded2b5b42)
+
+![image](https://github.com/JuanPVL/SO1_1S2024_202101648/assets/98924809/4b7a99be-46b5-4018-bb27-3a630dbcb968)
+
 
 --- 
