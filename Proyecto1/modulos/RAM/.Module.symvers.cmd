@@ -1,0 +1,1 @@
+savedcmd_/home/juanpvl/Escritorio/Continuacion_so1/Proyecto1/modulos/RAM/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/juanpvl/Escritorio/Continuacion_so1/Proyecto1/modulos/RAM/Module.symvers -T /home/juanpvl/Escritorio/Continuacion_so1/Proyecto1/modulos/RAM/modules.order -i Module.symvers -e 

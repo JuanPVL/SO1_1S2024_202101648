@@ -2,13 +2,19 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, Route} from "react-router-dom"
 import App from './App.jsx'
-import './index.css'
+import BarraSup from './navbar.jsx'
+import Graficas from './GraficoTReal.jsx'
+import Historico from './HistoricoG.jsx'
+import ArbolProcesos from './ArbolProcess.jsx'
+import SimulacionP from './SimulacionProcess.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import './index.css'
 
 
 function Home() {
   return (
     <div>
-      <Navbar />
+      <BarraSup />
       <App />
     </div>
   );
@@ -17,7 +23,7 @@ function Home() {
 function LiveCharts() {
   return (
     <div>
-      <Navbar />
+      <BarraSup />
       <Graficas />
     </div>
   );
@@ -26,7 +32,7 @@ function LiveCharts() {
 function Hystoric() {
   return (
     <div>
-      <Navbar />
+      <BarraSup />
       <Historico />
     </div>
   );
@@ -35,7 +41,7 @@ function Hystoric() {
 function ProcessTree() {
   return (
     <div>
-      <Navbar />
+      <BarraSup />
       <ArbolProcesos />
     </div>
   );
@@ -44,7 +50,7 @@ function ProcessTree() {
 function Simulation() {
   return (
     <div>
-      <Navbar />
+      <BarraSup />
       <SimulacionP />
     </div>
   );

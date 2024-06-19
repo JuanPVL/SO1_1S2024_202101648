@@ -32,7 +32,7 @@ static int escribir_archivo(struct seq_file *file_proc, void *v){
     
 
     uint64_t total_cpu_time_ns;
-    uint64_t total_usage_ns;
+    uint64_t total_usage_ns,total_free;
     unsigned long cpu_porcentaje;
     unsigned long cpu_porcentaje_no_usado;
 
@@ -75,11 +75,12 @@ static int escribir_archivo(struct seq_file *file_proc, void *v){
 
     // Porcentaje de CPU no utilizado
     cpu_porcentaje_no_usado = 100 - cpu_porcentaje;
-
+    total_free = total_cpu_time_ns - total_usage_ns;
     //---------------------------------------------------------------------------
     
     seq_printf(file_proc, "{\n\"cpu_total\":%llu,\n", total_cpu_time_ns);
     seq_printf(file_proc, "\n\"cpu_en_uso\":%llu,\n", total_usage_ns);
+    seq_printf(file_proc, "\"cpu_libre\":%llu,\n", total_free);
     seq_printf(file_proc, "\"PorcUsed\":%ld,\n", cpu_porcentaje);
     seq_printf(file_proc, "\"PorcNotUsed\":%ld\n", cpu_porcentaje_no_usado);
     seq_printf(file_proc, "\n}\n");

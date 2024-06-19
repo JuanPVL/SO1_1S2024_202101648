@@ -2,18 +2,20 @@ package main
 
 import (
 	"context"
-	"database/sql"
+	//"database/sql"
 	"fmt"
 	"log"
 	"net"
 	pb "server/proto"
 
-	_ "github.com/go-sql-driver/mysql"
+	"github.com/google/uuid"
+	"github.com/segmentio/kafka-go"
 	"google.golang.org/grpc"
 )
 
 var ctx = context.Background()
-var db *sql.DB
+
+// var db *sql.DB
 
 type server struct {
 	pb.UnimplementedGetInfoServer
@@ -30,21 +32,25 @@ type Data struct {
 	Rank  string
 }
 
-func mysqlConnect() {
-	dsn := "root:secret@tcp(34.30.155.164:3306)/tarea4"
 
-	var err error
-	db, err = sql.Open("mysql", dsn)
+func writeDataKafka(data Data) {
+	topic := "myvote"
+	w := kafka.NewWriter(kafka.WriterConfig{
+		Brokers:  []string{"my-cluster-kafka-bootstrap:9092"},
+		Topic:    topic,
+		Balancer: &kafka.LeastBytes{},
+	})
+
+	dataEvent := fmt.Sprintf(`{"name": "%s", "album": "%s", "year": "%s", "rank": "%s"}`, data.Name, data.Album, data.Year, data.Rank)
+	err := w.WriteMessages(ctx, kafka.Message{
+		Key:   []byte(uuid.New().String()),
+		Value: []byte(dataEvent),
+	})
 	if err != nil {
 		log.Fatalln(err)
-	}
+		log.Println("Error al escribir en Kafka", err)
 
-	err = db.Ping()
-	if err != nil {
-		log.Fatalln(err)
 	}
-
-	fmt.Println("Conexión a MySQL exitosa")
 }
 
 func (s *server) ReturnInfo(ctx context.Context, in *pb.RequestId) (*pb.ReplyInfo, error) {
@@ -56,16 +62,9 @@ func (s *server) ReturnInfo(ctx context.Context, in *pb.RequestId) (*pb.ReplyInf
 		Rank:  in.GetRank(),
 	}
 	fmt.Println(data)
-	insertMySQL(data)
+	//insertMySQL(data)
+	writeDataKafka(data)
 	return &pb.ReplyInfo{Info: "Hola cliente, recibí el comentario"}, nil
-}
-
-func insertMySQL(music Data) {
-	query := "INSERT INTO music (name, album, year_release, rank_album) VALUES (?, ?, ?, ?)"
-	_, err := db.ExecContext(ctx, query, music.Name, music.Album, music.Year, music.Rank)
-	if err != nil {
-		log.Println("Error al insertar en Base de Datos:", err)
-	}
 }
 
 func main() {
@@ -76,7 +75,7 @@ func main() {
 	s := grpc.NewServer()
 	pb.RegisterGetInfoServer(s, &server{})
 
-	mysqlConnect()
+	//mysqlConnect()
 
 	if err := s.Serve(listen); err != nil {
 		log.Fatalln(err)

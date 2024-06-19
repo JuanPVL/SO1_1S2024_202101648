@@ -30,8 +30,8 @@ func insertData(c *fiber.Ctx) error {
 	music := Data{
 		Name:  data["name"],
 		Album: data["album"],
-		Year:  data["year_release"],
-		Rank:  data["rank_album"],
+		Year:  data["year"],
+		Rank:  data["rank"],
 	}
 
 	go sendServer(music)
@@ -74,7 +74,7 @@ func main() {
 			"res": "todo bien",
 		})
 	})
-	app.Post("/insert", insertData)
+	app.Post("/grpc/insert", insertData)
 
 	err := app.Listen(":3000")
 	if err != nil {

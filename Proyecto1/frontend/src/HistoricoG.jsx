@@ -1,75 +1,131 @@
 import {useState,useEffect} from 'react';
-import { Doughnut } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement, Legend, Tooltip } from 'chart.js';
+import { Line } from 'react-chartjs-2';
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+  } from 'chart.js';
+import { Col, Container, Row } from 'react-bootstrap';
 
 
-ChartJS.register(ArcElement,Tooltip,Legend)
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+  );
+
+  export const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: '',
+      },
+    },
+  };
+
+
 
 function Historico() {
-    const [data, setData] = useState({
-        total:0,
-        used:0,
-        free:0,
-        porcUsed:0,
-        porcFree:0
-    });
+    const [data, setData] = useState([]);
+    const [cpuData, setCpuData] = useState([]);
 
     const getRamData = async () => {
         try {
-            const response = await CatMod();
-            console.log(response);
-            const datos = JSON.parse(response);
+            const response = await fetch("/api/historicoram")
+            //console.log(response);
+            const datos = await response.json();
             console.log(datos);
-            setData({
-                total: datos.totalRam,
-                used: datos.used,
-                free: datos.free,
-                porcUsed: datos.porcUsed,
-                porcFree: datos.porcNotUsed
-            });
-        } catch (error) {
+            setData(datos);
+        }
+        catch (error) {
+            console.error(error);
+        }
+    }
+
+    const getCpuData = async () => {
+        try {
+            const response = await fetch("/api/historicocpu")
+            //console.log(response);
+            const datos = await response.json();
+            console.log(datos);
+            setCpuData(datos);
+        }
+        catch (error) {
             console.error(error);
         }
     }
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            getRamData();
-        }, 500);
+        getRamData();
+        getCpuData();
+    }
+    , []);
 
-        return () => {
-            clearInterval(interval);
-        };
-    }, []);
 
     return (
         <div id="App">
-            <h1>RAM</h1>
-            <h2>Total RAM: {data.total} Mb</h2>
-            <h2>Percentage used: {data.porcUsed}%</h2>
-            <h2>Percentage free: {data.porcFree}%</h2>
-            <div style={{height: '30%', height: '30%', padding: '20px'}}>
-            <Doughnut
-                className='doughnut'
-                data={{
-                    labels: ['Used', 'Free'],
-                    datasets: [
-                        {
-                            data: [data.used, data.free],
-                            backgroundColor: [
-                                'rgba(255, 165, 0, 0.6)',
-                                'rgba(106, 90, 205, 0.6)',
-                            ],
-                            borderColor: [
-                                'rgba(255, 165, 0, 1)',
-                                'rgba(106, 90, 205, 1)',
-                            ],
-                            borderWidth: 1,
-                        },
-                    ],
-                }}
-            />
-            </div>
+            <h1>HISTORICO USO RAM Y CPU</h1>
+            <Container>
+            <Row>
+                    <Col>
+                        <h1>MEMORIA RAM</h1>
+                    </Col>
+                    <Col>
+                        <h1>CPU</h1>
+                    </Col>
+                </Row>
+            <Row>
+                <Col>
+                <Line
+                    className='historicoram'
+                    data={{
+                        labels: data.map((item) => item.Tiempo),
+                        datasets: [
+                            {
+                                label: 'Used',
+                                data: data.map((item) => item.PorcUsed),
+                                fill: false,
+                                backgroundColor: 'rgb(255, 99, 132)',
+                                borderColor: 'rgba(255, 99, 132, 0.5)',
+                            },
+                        ],
+                    }}
+                    options={options}            
+                />
+                </Col>
+                <Col>
+                <Line
+                    className='historicocpu'
+                    data={{
+                        labels: cpuData.map((item) => item.Tiempo),
+                        datasets: [
+                            {
+                                label: 'Used',
+                                data: cpuData.map((item) => item.PorcUsed),
+                                fill: false,
+                                backgroundColor: 'rgb(158, 253, 253)',
+                                borderColor: 'rgba(158, 253, 253, 0.5)',
+                            },
+                        ],
+                    }}
+                    options={options}            
+                />
+                </Col>
+            </Row>
+            </Container>
         </div>
     )
 }

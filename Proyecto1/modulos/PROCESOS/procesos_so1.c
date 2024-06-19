@@ -163,7 +163,6 @@ static int escribir_archivo(struct seq_file *file_proc, void *v){
     seq_printf(file_proc, "\"stopped\":%d,\n", stopped);
     seq_printf(file_proc, "\"total\":%d\n", running + sleeping + zombie + stopped);
     seq_printf(file_proc, "}\n");
-    seq_printf(file_proc, "\n}\n");
     return 0;
     
 }

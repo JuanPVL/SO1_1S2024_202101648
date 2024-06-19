@@ -1,0 +1,1 @@
+savedcmd_/home/juanpvl/Escritorio/Continuacion_so1/Proyecto1/modulos/PROCESOS/procesos_so1.mod := printf '%s\n'   procesos_so1.o | awk '!x[$$0]++ { print("/home/juanpvl/Escritorio/Continuacion_so1/Proyecto1/modulos/PROCESOS/"$$0) }' > /home/juanpvl/Escritorio/Continuacion_so1/Proyecto1/modulos/PROCESOS/procesos_so1.mod

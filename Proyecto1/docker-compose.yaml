@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  base:
+    image: "mysql"
+    container_name: so1_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: historico
+    volumes:
+      - base_mysql:/var/lib/mysql      
+    ports:
+      - "3306:3306"
+  backend:
+    image: juanpvl/back_p1
+    container_name: so1_p1_back
+    privileged: true
+    pid: host
+    restart: always
+    ports:
+      - 3008:3008
+    volumes:
+      - /proc:/host_proc
+    depends_on:
+      - base
+  client:
+    image: juanpvl/front_p1
+    container_name: so1_p1_client
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+volumes:
+  base_mysql:

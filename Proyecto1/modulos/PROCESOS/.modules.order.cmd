@@ -1,0 +1,1 @@
+savedcmd_/home/juanpvl/Escritorio/Continuacion_so1/Proyecto1/modulos/PROCESOS/modules.order := {   echo /home/juanpvl/Escritorio/Continuacion_so1/Proyecto1/modulos/PROCESOS/procesos_so1.o; :; } > /home/juanpvl/Escritorio/Continuacion_so1/Proyecto1/modulos/PROCESOS/modules.order
